@@ -1,4 +1,4 @@
-![143](https://github.com/user-attachments/assets/3a3f04ef-1262-4649-906f-78df81e2cb9c)**NASSCOM VSD SoC Design Program**
+**NASSCOM VSD SoC Design Program**
 
 **Sky130 Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK**
 
