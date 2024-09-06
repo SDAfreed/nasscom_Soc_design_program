@@ -17,7 +17,6 @@ The black chip shown below is a package, with the actual chip located inside thi
 
 Upon opening the real chip, we can see the pads that connect the pins to the outside. Any signal entering or exiting the chip does so through these pads. Then we have the core, which contains all the digital logic. The die comprises both the core and the pads together. Chip Internals: Inside the core, we have MACROs (SoC, GPIO Banks, SPIs) and Foundry IPs (like PLL, SDCs, DAC, SRAM). MACROs are pure digital logic whereas Foundry IPs need some intelligence to write.
 
-![5](https://github.com/user-attachments/assets/eb2455bb-c2c6-428d-835b-a4de99ef78d7)
 
 **Introduction to RISC-V**
 
@@ -34,24 +33,16 @@ Another interface that needs to be represented between RISC V and the layout is 
 
 All the software applications we use in our daily lives rely on hardware to run. The system software is responsible for translating the application program into binary language, which the hardware can understand and execute. The primary components of system software include the Operating System (OS), Compiler, and Assembler. The OS plays a crucial role in managing various aspects of the computer system. It provides an environment for the application program to run and handles tasks such as memory management, process scheduling, and input/output operations. Depending on the underlying architecture, such as MIPS, x86, x64, or RISC-V, the OS translates the application program into assembly language instructions. The compiler is responsible for converting high-level programming languages, like C or Java, into assembly-level language instructions. This translation process is influenced by the specific architecture on which the software will be executed. Different architectures have their own instruction sets, and the compiler ensures that the instructions generated are compatible with the targeted architecture. Once the code is in assembly language, the assembler comes into play. It takes the assembly code and translates it into binary code, which is a sequence of 0s and 1s that can be directly dumped into the hardware.
 
-![7](https://github.com/user-attachments/assets/a27cc4f9-3c97-40f4-ad2b-bee5ef85cd3d)
-
 
 Any C/C++/VB/JAVA function --\> respective language compiler --\> converted into hardware based instruction set--\> assembler --\> hexa-decimal representation of instructions (binary form. .exe file) --\> enter chip--\> hardware responds as per incoming bitstream.
 
 The syntax of the instruction set at compiler output is dependent on hardware architecture. E.g., for x86, ARM, RISC V types of hardware, the instruction set will also be in x86, ARM, RISC V format respectively. The final output binary pattern decides what should be the hardware should be doing. An example of a C input program compiled into instructions is given below: The instruction set acts as an abstract interface between the C language function and the hardware.
-
-![8](https://github.com/user-attachments/assets/f4e0627c-ac59-46a4-b6ee-e33424f5b74a)
-![9](https://github.com/user-attachments/assets/80683e53-86a9-45fe-a05f-7fff3498a333)
-
 
 **SKY130_D1_SK2 - SoC Design and OpenLANE**
 
 **ASIC Design Flow**
 
 ASIC (Application-Specific Integrated Circuit) design flow refers to the series of steps involved in designing a custom chip tailored for a specific application. Unlike general-purpose ICs, ASICs are optimized for particular tasks, making them highly efficient for their intended purpose. The design flow is a structured process that ensures the final chip meets all functional, performance, and manufacturability requirements.
-
-![10](https://github.com/user-attachments/assets/172cad7e-b88f-475f-a7e3-b0e053c3a44a)
 
 
 Major Steps in the ASIC Design Flow
@@ -108,37 +99,15 @@ The RTL to GDSII flow basically involves:
 1.  **RTL Design** - The process begins with the RTL design phase, where the digital circuit is described using a hardware description language (HDL) like VHDL or Verilog. The RTL description captures the functional behaviour of the circuit, specifying its logic and data paths.
 2.  **RTL Synthesis** - RTL synthesis converts the high-level RTL description into a gate-level netlist. This stage involves mapping the RTL code to a library of standard cells (pre-designed logic elements) and optimizing the resulting gate-level representation for area, power, and timing. The output of RTL synthesis is typically in a format called the gate-level netlist.
 
-![13](https://github.com/user-attachments/assets/1cad10d5-ac0f-4e70-8f9c-513fc23cba98)
-![14](https://github.com/user-attachments/assets/cbf6e16b-8b7c-418e-9e04-d1f5f030582d)
-
-
 3.  **Floor and Power Planning** - is a crucial step in the digital design flow that involves partitioning the chip's area and determining the placement of major components and functional blocks. It establishes an initial high-level layout and defines the overall chip dimensions, locations of critical modules, power grid distribution, and I/O placement.The primary goals of floor planning are: Area Partitioning, Power Distribution, Signal Flow and Interconnect Planning, Placement of Key Components, Design Constraints and Optimization.
-![15](https://github.com/user-attachments/assets/284d0489-9679-462a-9489-bb44bb0b80a6)
-
-
-![17](https://github.com/user-attachments/assets/b7194b8f-cc9a-4cb4-ac10-42737f760161)
 
 4.  **Placement** - Placement involves assigning the physical coordinates to each gate-level cell on the chip's layout. The placement process aims to minimize wirelength, optimize signal delay, and satisfy design rules and constraints. Modern placement algorithms use techniques like global placement and detailed placement to achieve an optimal placement solution.
 
-![18](https://github.com/user-attachments/assets/cad8db29-9f9d-4410-908a-b173f2960eef)
-
-![19](https://github.com/user-attachments/assets/87dcd95d-3898-4145-87dd-ed637e570a83)
-
 5.  **Clock Tree Synthesis** - Clock tree synthesis (CTS) is a crucial step in the digital design flow that involves constructing an optimized clock distribution network within an integrated circuit (IC). The primary goal of CTS is to ensure balanced and efficient clock signal distribution to all sequential elements (flip-flops, registers) within the design, minimizing clock skew and achieving timing closure.
-
-
-![20](https://github.com/user-attachments/assets/d3238422-8c04-4845-b01e-168d15423e44)
 
 6.  **Routing** - Routing connects the gates and interconnects on the chip based on the placement information. It involves determining the optimal paths for the wires and vias that carry signals between different components. The routing process needs to adhere to design rules, avoid congestion, and optimize for factors like signal integrity, power, and manufacturability.
 
-![21](https://github.com/user-attachments/assets/42c20bfc-1900-4d5f-b10c-e19704280561)
-![22](https://github.com/user-attachments/assets/05e711f6-ca4a-49b8-91a8-fe6d6015ccf1)
-
-
 7.  **Sign-off** - Sign-off analysis refers to the final stage of the electronic design process, where comprehensive verification and analysis are performed to ensure that the design meets all the necessary requirements and specifications. It involves a series of checks and simulations to confirm that the design is ready for fabrication and meets the desired functionality, performance, power, and reliability targets.
-
-![23](https://github.com/user-attachments/assets/f3b06ac8-59e7-466f-ab51-c2ebf8ff4dc4)
-
 
 8.  **GDSII File Generation** - Once the layout is verified and passes all checks, the final step is to generate the GDSII file format, which represents the complete physical layout of the chip. The GDSII file contains the geometric information necessary for fabrication, including the shapes, layers, masks, and other relevant details.
 
