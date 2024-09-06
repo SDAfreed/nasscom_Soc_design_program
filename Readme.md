@@ -1,4 +1,4 @@
-**NASSCOM VSD SoC Design Program**
+![143](https://github.com/user-attachments/assets/3a3f04ef-1262-4649-906f-78df81e2cb9c)**NASSCOM VSD SoC Design Program**
 
 **Sky130 Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK**
 
@@ -8,9 +8,6 @@
 
 All embedded boards contain processor chips. The block diagram of the Arduino board is shown below where the centre piece that is highlighted is Processor,along with the processor we have other interfaces around it.
 ![1](https://github.com/user-attachments/assets/bf70f49f-9205-4f86-8984-6d293de1ae02)
-![2](https://github.com/user-attachments/assets/97a74124-8977-4a00-9c81-0766270996c0)
- 
-
 
 
 The black chip shown below is a package, with the actual chip located inside this package. The package shown is a QFN (Quad Flat No-leads) 48 package. The actual chip pins are connected to the package pins using wire bonds.
@@ -19,8 +16,6 @@ The black chip shown below is a package, with the actual chip located inside thi
 
 
 Upon opening the real chip, we can see the pads that connect the pins to the outside. Any signal entering or exiting the chip does so through these pads. Then we have the core, which contains all the digital logic. The die comprises both the core and the pads together. Chip Internals: Inside the core, we have MACROs (SoC, GPIO Banks, SPIs) and Foundry IPs (like PLL, SDCs, DAC, SRAM). MACROs are pure digital logic whereas Foundry IPs need some intelligence to write.
-![4](https://github.com/user-attachments/assets/73a28795-e47e-443d-8828-91ac50ff2eb1)
-
 
 ![5](https://github.com/user-attachments/assets/eb2455bb-c2c6-428d-835b-a4de99ef78d7)
 
@@ -120,7 +115,6 @@ The RTL to GDSII flow basically involves:
 3.  **Floor and Power Planning** - is a crucial step in the digital design flow that involves partitioning the chip's area and determining the placement of major components and functional blocks. It establishes an initial high-level layout and defines the overall chip dimensions, locations of critical modules, power grid distribution, and I/O placement.The primary goals of floor planning are: Area Partitioning, Power Distribution, Signal Flow and Interconnect Planning, Placement of Key Components, Design Constraints and Optimization.
 ![15](https://github.com/user-attachments/assets/284d0489-9679-462a-9489-bb44bb0b80a6)
 
-![16](https://github.com/user-attachments/assets/39ce7884-7be9-4efc-a303-e89c26f532e3)
 
 ![17](https://github.com/user-attachments/assets/b7194b8f-cc9a-4cb4-ac10-42737f760161)
 
@@ -244,9 +238,6 @@ Flop ratio = 1613 / 14876 = 0.10843
 
 **Utilization factor and Aspect ratio:**
 
-
-![25](https://github.com/user-attachments/assets/e4f8832e-06db-4560-9b25-e00d5c72da1b)
-![26](https://github.com/user-attachments/assets/99198245-6326-4afe-ace1-f4bcc17e4936)
 ![27](https://github.com/user-attachments/assets/4d5f06f8-66d0-4590-8204-dab5531ca27a)
 
 Utilization Factor = Area occupied by netlist / Total area of the core
@@ -265,12 +256,7 @@ The pre-placed cells are typically larger and more complex modules, such as memo
 
 **De-Coupling Capacitors:**
 
-
 ![30](https://github.com/user-attachments/assets/972d9436-7aec-4ddb-93db-cd692e3c49ee)![31](https://github.com/user-attachments/assets/f1689f52-c5a2-4ffe-938a-40934b72db75)
-![32](https://github.com/user-attachments/assets/04564dd7-bd02-419e-8d38-976d329e4442)
-![33](https://github.com/user-attachments/assets/76a2a506-d56a-4f08-a1d8-6b27ac6cb9e9)
-![34](https://github.com/user-attachments/assets/8497fcbc-6383-4f45-97ea-c91d54f1a4f6)
-
 
 Decoupling capacitors constitute an indispensable element within the realm of electronic circuit design, particularly in the context of integrated circuits (ICs) and printed circuit boards (PCBs). Their primary purpose revolves around the stabilization of power supply voltage levels, a crucial function in mitigating noise and upholding consistent voltage for delicate components. As electronic apparatuses operate at elevated frequencies, abrupt shifts in current demands can incite voltage fluctuations and unwanted noise, thereby resulting in performance dilemmas and signal deterioration. Decoupling capacitors, akin to a safeguard, establish a local storehouse of electrical charge that can swiftly respond to these fluctuations. Essentially, they act as reservoirs, storing and disbursing electrical energy as required, effectively sieving out undesirable noise and voltage oscillations.
 
@@ -278,17 +264,11 @@ Decoupling capacitors are strategically sited near power-thirsty constituents, s
 
 **Power Planning:**
 
-
-![35](https://github.com/user-attachments/assets/7aad7694-4281-40a9-ab77-9db371364faf)![36](https://github.com/user-attachments/assets/50441ff2-4591-4b61-bcea-55b0c2b099a8)
-![37](https://github.com/user-attachments/assets/bda368fb-884e-456f-85c4-db69be95f0b4)
 ![38](https://github.com/user-attachments/assets/85f278a8-9a33-44e3-a0fa-c03fb51b44cf)
-
 
 Power planning in integrated circuit (IC) design involves the careful consideration and distribution of power and ground connections to ensure proper functionality and performance of the chip. One important aspect of power planning is the placement of multiple ground (GND) and supply voltage (VDD) points throughout the IC layout. The need for multiple GND and VDD points arises due to several reasons: By providing multiple GND and VDD points, the power can be distributed more evenly throughout the chip, reducing the chances of voltage drops and improving overall power delivery efficiency. Ground bounce occurs when there are variations in the voltage levels of different GND points due to transient currents. Similarly, power supply noise refers to fluctuations in the VDD levels caused by switching events. By strategically placing multiple GND and VDD points, the impact of ground bounce and power supply noise can be minimized, improving circuit performance and reducing the risk of functional failures.
 
 **Pin Placement and logical cell placement blockage:**
-
-![39](https://github.com/user-attachments/assets/81b575eb-6a77-4245-b449-2be43dbb1140)
 
 ![40](https://github.com/user-attachments/assets/befd1c77-1ee9-4abe-a7ee-42df6bfcb426)
 ![41](https://github.com/user-attachments/assets/7347f3c7-8108-42e5-a821-2ddfce835645)
@@ -350,9 +330,6 @@ Once the floorplan is complete, you can review the generated report to access as
 
 In a netlist every element has its own shape, for example AND gate has a shape and OR gate has a different shape. But in a library every element has only a square or rectangle shape. A Library consists of every element that can be readily used and these elements come with their respective properties such as area, delay, timing information, required conditions etc. We will have different versions of the same element with different properties. The elements which are larger in size are faster but occupies larger area and the smaller set will occupy less area but are slower when compared to larger ones.
 
-![42](https://github.com/user-attachments/assets/6d600467-4b6f-4fcb-af23-93875f32a988)
-
-![43](https://github.com/user-attachments/assets/dab9ba89-d8b2-4131-98a0-85cd5f5c9598)
 ![44](https://github.com/user-attachments/assets/bb1b0041-784b-407d-8c29-d2b860efe9d9)
 
 **Optimize placement using estimated wire-length and capacitance**
@@ -366,22 +343,15 @@ During Placement we should consider the estimated wire length and place the cell
 
 This is the stage where we estimate wire length and capacitances and based on that we insert repeaters(Buffers).
 
-![46](https://github.com/user-attachments/assets/8e9337e0-49ea-4807-9c4a-bfb6706d0a99)
-
 ![47](https://github.com/user-attachments/assets/8721cec3-bc5a-4500-9a87-90d7911cc4dd)
 
 **Need for libraries and characterization**
 
-
-![48](https://github.com/user-attachments/assets/317b20c1-66f8-4633-b16c-45ad0235146c)
-![49](https://github.com/user-attachments/assets/799d7ba9-edad-45ae-aac5-2363821afda8)![50](https://github.com/user-attachments/assets/d2dba9fa-fb2d-4832-aff9-f93c59571d88)
-![51](https://github.com/user-attachments/assets/0895f3fe-8d24-43c6-9780-19baa9145ad8)
 ![52](https://github.com/user-attachments/assets/ee81cb5b-e62d-40ae-a45d-7210fa969b8c)
 ![53](https://github.com/user-attachments/assets/3dca65e9-b102-40a0-97d3-141299dfd93d)
 
 
-All these stage![Uploading 50.png…]()
-s commonly have gates or cells and theses collection of gates placed in an area is called Library. That means without librabries, all these stages can’t be performed. That’s why Librabries are needed.
+All these stages commonly have gates or cells and theses collection of gates placed in an area is called Library. That means without librabries, all these stages can’t be performed. That’s why Librabries are needed.
 
 ![54](https://github.com/user-attachments/assets/081ba3ab-9648-4fb9-a96e-cead5958f93b)
 
@@ -483,26 +453,6 @@ b. Perform physical testing on fabricated cells to ensure they meet specificatio
 a. Integrate the cell into a cell library for use in larger IC designs.
 
 b. Ensure compatibility with other cells in the library.
-![55](https://github.com/user-attachments/assets/7b440867-3a44-4a71-afca-36a4090c89cc)
-![56](https://github.com/user-attachments/assets/cd30e318-89cc-471f-bf0b-068f8d22a357)
-![57](https://github.com/user-attachments/assets/1224fc47-b078-4cf6-95cc-bb30816f80ba)
-![58](https://github.com/user-attachments/assets/4a425665-ed5b-43c1-8724-41dfd4451060)
-![59](https://github.com/user-attachments/assets/5a144dd6-eae8-4c05-858a-78190b06bb30)
-![60](https://github.com/user-attachments/assets/fff145cf-32d3-4f2e-b4f2-ced8e0581dca)
-![61](https://github.com/user-attachments/assets/b0b2644a-76fd-4859-b870-06d8ceb7d8d3)
-![62](https://github.com/user-attachments/assets/ae83e30f-f6e0-4044-9bb5-a21a30d165c4)
-![63](https://github.com/user-attachments/assets/6bb2d080-313e-4ac5-bbdc-1653358d8ef4)
-![64](https://github.com/user-attachments/assets/1b30c0e4-a4af-456d-a9db-75bc31473821)
-![65](https://github.com/user-attachments/assets/772b5ef3-b620-437e-8383-b4583c0b6659)
-![66](https://github.com/user-attachments/assets/9abeb1b6-b445-4ddc-a356-1751460db743)
-![67](https://github.com/user-attachments/assets/d9ddb9c3-f5de-4f7c-88fa-d49b855ab72a)
-![68](https://github.com/user-attachments/assets/df005495-f093-4516-89bd-a659fa0b40e4)
-![69](https://github.com/user-attachments/assets/ec6f3ab7-e077-48cd-a657-62de194393ef)
-![70](https://github.com/user-attachments/assets/56eac06f-0220-4ac7-9ee7-20cc1b23ceba)
-
-
-
-
 
 **Design Steps**
 
@@ -525,7 +475,7 @@ b. Ensure compatibility with other cells in the library.
 -   **Timing, Noise, and Power Libraries:** Generated during characterization.
 
 **Characterization:**
-![71](https://github.com/user-attachments/assets/b7715930-5b41-40ee-8931-b9de407145b5)
+
 ![72](https://github.com/user-attachments/assets/38aff7d5-cd65-411c-827c-f3392619571d)
 ![73](https://github.com/user-attachments/assets/a1fa6d4a-89f5-4d0e-864e-ae82abc5791b)
 
@@ -552,13 +502,7 @@ In standard cell characterization, one of the classifications of libs is timing 
 **Timing threshold:**
 
 Timing thresholds are critical parameters in the design and analysis of digital circuits, particularly in the context of integrated circuits (ICs). They define the boundaries within which a circuit must operate to ensure reliable and correct functionality. Timing thresholds are used to determine whether a circuit meets its performance specifications, such as speed and power consumption.
-![74](https://github.com/user-attachments/assets/7522d2ba-7424-4993-9316-ce52be05ab46)
-![75](https://github.com/user-attachments/assets/5b9f3933-5560-4c07-af73-b0be89e4b2ed)
-![76](https://github.com/user-attachments/assets/aedb61ab-0d49-4201-927e-45bae0179483)
-![77](https://github.com/user-attachments/assets/8eb288d5-c695-458b-8d11-74b5362b678b)
-![78](https://github.com/user-attachments/assets/df99f729-1e74-4c94-9290-59aba8756444)
-![79](https://github.com/user-attachments/assets/e2e8129f-2c70-445f-b791-cde8d295ac5c)
-![80](https://github.com/user-attachments/assets/fb24fa30-2939-4782-b92f-4ae4db02be08)
+
 ![81](https://github.com/user-attachments/assets/edd715e9-89be-4af3-9c63-d62252cc1c98)
 
 **Propagation Delay and Transition Time**
@@ -586,7 +530,6 @@ Rise transition time = time(slew_high_rise_thr) - time (slew_low_rise_thr)
 Low transition time = time(slew_high_fall_thr) - time (slew_low_fall_thr)
 
 ![82](https://github.com/user-attachments/assets/dfb7d046-7100-4fea-91db-3b15592e11c0)
-![83](https://github.com/user-attachments/assets/b687503e-0c80-4d29-ac17-e48aa5cda23d)
 ![84](https://github.com/user-attachments/assets/6c90608b-2e89-4484-b1d8-1a893db87c2a)
 
 **Sky130 Day 3 - Design library cell using Magic Layout and ngspice characterization.**
@@ -597,15 +540,6 @@ Low transition time = time(slew_high_fall_thr) - time (slew_low_fall_thr)
 
 PnR is a iterative flow and hence, we can make changes to the environment variables in the fly to observe the changes in our design.
 
-When FP_IO_MODE is 2
-![141](https://github.com/user-attachments/assets/2db4e162-665c-43a7-9de4-e0b42c4d8a84)
-
-
-When FP_IO_MODE is 1
-
-![142](https://github.com/user-attachments/assets/8a099dd2-a685-4ef3-937c-d4d7dd1d20fa)
-
-
 **SPICE deck creation for CMOS inverter**
 
 Before performing a SPICE simulation we need to create SPICE Deck SPICE Deck provides information about the following:
@@ -615,15 +549,7 @@ Before performing a SPICE simulation we need to create SPICE Deck SPICE Deck pro
 3.  Node Identification and naming - Nodes are required to define the SPICE Netlist
 4.  Simulation commands
 5.  Model file - information of parameters related to transistors Simulation of CMOS using different width and lengths. From the waveform, irrespective of switching the shape of it are almost the same.
-![85](https://github.com/user-attachments/assets/8a58c19e-6ca1-46b4-beab-1d1da3925f82)
-![86](https://github.com/user-attachments/assets/fc51a7d6-7405-488c-b8f4-b434600455cc)
-![87](https://github.com/user-attachments/assets/71c5f25c-5a7f-4cb7-9897-426e907e4aed)
-![88](https://github.com/user-attachments/assets/acb06860-840f-4d6f-b8e0-95a565226e66)
-![89](https://github.com/user-attachments/assets/7fa7abce-18da-4024-b54d-e2c1b8002c0a)
-![90](https://github.com/user-attachments/assets/58b01e44-a1c7-4db0-8344-32e26a60a6c7)
-![91](https://github.com/user-attachments/assets/9ae0ce26-f16e-429f-bee6-e20b2559c2ea)
-![92](https://github.com/user-attachments/assets/ad876056-59fe-47a8-a09e-5307c633ae83)
-![93](https://github.com/user-attachments/assets/d846678e-b1f6-4297-9b5e-8ed473339d14)
+
 ![94](https://github.com/user-attachments/assets/99579daf-c8a7-4489-a426-221740dc08df)
 
 
@@ -851,8 +777,7 @@ In this guide, we'll demonstrate how to fill a selected area with metal 3 and cr
     -   Open the tkcon terminal within Magic.
     -   Type the command: cif see VIA2.
     -   The metal 3-filled area will now be associated with the VIA2 mask.
-
-![113](https://github.com/user-attachments/assets/36403550-ff02-481c-95fa-032f697d0e2e)
+    -   
 ![114](https://github.com/user-attachments/assets/6031e487-c3fa-47de-9799-11fa9534ff59)
 ![115](https://github.com/user-attachments/assets/d0842edc-5834-4b65-89da-5e938b3c623b)
 
@@ -877,7 +802,6 @@ Now again load the tech file by using the command tech ‘load sky130A.tech’ a
 **DRC error as geometrical construct**
 
 Now load nwell.mag file into the magic and check for violations. 
-![123](https://github.com/user-attachments/assets/90318630-6451-4bb8-94df-7cd561abfbd8)
 
 ![124](https://github.com/user-attachments/assets/96aaccd1-c37f-4bf8-91dc-5b93767e232c)
 ![125](https://github.com/user-attachments/assets/5f08f8eb-d826-4b74-b15c-eb899d871462)
@@ -949,7 +873,7 @@ Name the custom cell through tkcon window as sky130_vsdinv.mag.
 
 We generate lef file by command: ‘lef write’
 
-![A screenshot of a computer Description automatically generated](media/62fc77578979f7d535029826a912b35d.png)
+![143](https://github.com/user-attachments/assets/78c77a18-b3b4-4fef-82c2-a346adfe65e4)
 
 This generates sky130_vsdinv.lef file. Once the lef is generated we move it to the picorv32a/src directory to utilize it in our design.
 
@@ -1204,7 +1128,6 @@ The algorithm assigns labels to neighbouring grid cells around the source, incre
 
 However, the Lee algorithm has limitations. It essentially constructs a maze and then numbers its cells from the source to the target. While effective for routing between two pins, it can be time-consuming when dealing with millions of pins. There are alternative algorithms that address similar routing challenges.
 
-![98](https://github.com/user-attachments/assets/aac6ca72-7e34-40ad-a268-920198ff70f7)
 ![99](https://github.com/user-attachments/assets/5559811c-7b65-4284-8314-18a02b101fcd)
 
 **Design Rule Check (DRC)**
@@ -1215,15 +1138,7 @@ Design rules for physical wires
 
 Minimum width of the wire, Minimum spacing between the wires, Minimum pitch of the wire. To solve signal short violation, we take the metal layer and put it on to upper metal layer. we check via rules, Via width, via spacing.
 
-![100](https://github.com/user-attachments/assets/138a42c1-5e28-4814-bf43-ff9231564dba)
-![101](https://github.com/user-attachments/assets/9ab7a268-6024-485f-9bb0-eb5dd8d84e40)
-![102](https://github.com/user-attachments/assets/cd9530fd-8995-4b5f-9dd9-78aa7d8b1158)
-![103](https://github.com/user-attachments/assets/898abf21-169a-4301-a175-905ec859ee1f)
-![104](https://github.com/user-attachments/assets/343684b0-a60b-4166-818e-ee33dfaae198)
-![105](https://github.com/user-attachments/assets/6770f6c4-7066-47c0-aafc-0ab1a4bb
 ![106](https://github.com/user-attachments/assets/0cdbe755-8f6e-47fd-8a7a-77a28399d1e9)
-c6f0)
-
 
 **SKY130_D5_SK2 - Power Distribution Network and routing**
 
