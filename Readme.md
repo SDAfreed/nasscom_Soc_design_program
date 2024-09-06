@@ -1,4 +1,4 @@
-**NASSCOM VSD SoC Design Program**
+![Screenshot 2024-09-06 185705](https://github.com/user-attachments/assets/7247bbaa-50b6-4495-b556-e9ce1cc8807d)![139](https://github.com/user-attachments/assets/e7d8bbf4-d56e-459c-b0ac-20b6775a447b)**NASSCOM VSD SoC Design Program**
 
 **Sky130 Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK**
 
@@ -598,10 +598,12 @@ Low transition time = time(slew_high_fall_thr) - time (slew_low_fall_thr)
 PnR is a iterative flow and hence, we can make changes to the environment variables in the fly to observe the changes in our design.
 
 When FP_IO_MODE is 2
+![141](https://github.com/user-attachments/assets/2db4e162-665c-43a7-9de4-e0b42c4d8a84)
 
 
 When FP_IO_MODE is 1
 
+![142](https://github.com/user-attachments/assets/8a099dd2-a685-4ef3-937c-d4d7dd1d20fa)
 
 
 **SPICE deck creation for CMOS inverter**
@@ -734,9 +736,9 @@ Each of these steps plays a crucial role in the fabrication process, contributin
     These voltage sources and simulation commands are defined in the Deck file.
 
     The extracted spice list has to be modified as shown below to use ngspice to perform simulation:
+![108](https://github.com/user-attachments/assets/5acc111e-99ad-40a9-a112-6484b65b7896)
 
-    ![A screenshot of a computer Description automatically generated](media/84beb19703c3e7b531cbeeb32f3895f4.png)
-
+   
     To simulate the spice netlist type the following command in the terminal:
 
     ‘ngspice sky130_inv.spice’
@@ -791,14 +793,15 @@ We can download the packaged files from web using wget command. wget stands for 
 ‘wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz’
 
 The archive file drc_tests.tgz is downloaded into our user directory once extraction is done, drc_tests file is created, and you will have all the information about magic layout for this lab exercise
+![109](https://github.com/user-attachments/assets/3ed50eeb-c6b7-4adf-9049-bb73a21ce2df)
 
-![A screenshot of a computer Description automatically generated](media/d59287438a67cf6a7c835ca51ea5c209.png)
 
 Now run MAGIC
 
 Use the command magic -d XR
 
-![A screenshot of a computer Description automatically generated](media/92692375d7b1082f4d0a7f9c2b4ba21f.png)
+![110](https://github.com/user-attachments/assets/6e4baaca-062e-4536-861f-019a95b5620c)
+
 
 VLSI Layout Geometries and DRC Errors
 
@@ -829,8 +832,9 @@ Violation: The enclosed area within M3.6 does not meet the specified minimum are
 Error: Minimum area violation.
 
 M3
+![111](https://github.com/user-attachments/assets/22aacad6-f0af-4723-a8a3-79ef17216937)
+![112](https://github.com/user-attachments/assets/25844e40-55fd-4827-9db0-bd14b6837b54)
 
-![A screenshot of a computer Description automatically generated](media/c34f22ff8f02c5148146e1507dded05d.png) ![A screenshot of a computer Description automatically generated](media/6e8131080a66aaeccd14d7b2961d39b6.png)
 
 **Using Magic Tool: Filling an Area with Metal 3 and creating a VIA2 Mask**
 
@@ -848,35 +852,46 @@ In this guide, we'll demonstrate how to fill a selected area with metal 3 and cr
     -   Type the command: cif see VIA2.
     -   The metal 3-filled area will now be associated with the VIA2 mask.
 
-![A screenshot of a computer Description automatically generated](media/fff121d82a2c98645825c8c425931af7.png)![A screenshot of a computer Description automatically generated](media/0c661708ddef535e542b8471e249852a.png)![A screenshot of a computer Description automatically generated](media/8c71c9d50af6f969ff05d5d2c843970b.png)
+![113](https://github.com/user-attachments/assets/36403550-ff02-481c-95fa-032f697d0e2e)
+![114](https://github.com/user-attachments/assets/6031e487-c3fa-47de-9799-11fa9534ff59)
+![115](https://github.com/user-attachments/assets/d0842edc-5834-4b65-89da-5e938b3c623b)
+
 
 **Fixing Poly-9 error in Sky130 tech file**
+![116](https://github.com/user-attachments/assets/c5d7b901-b2e7-4882-b145-f31daa15dbde)
+![117](https://github.com/user-attachments/assets/e91e8785-e629-4229-85bb-6141fb3c4ee4)
+![118](https://github.com/user-attachments/assets/6fcde451-0ce4-4e44-a578-b4497e5062a9)
 
-![A screenshot of a computer Description automatically generated](media/19db85eff8648007742f38f5feab2d01.png)![A screenshot of a computer Description automatically generated](media/9223958d1f7c8bab025d3d43d8cd2734.png)
-
-![A screenshot of a computer Description automatically generated](media/30d48467fc2f650b2bc3805752f69796.png)
 
 Open the sky130.tech file which is in the drc_tests directory and check for poly.9 keyword and make the changes that are shown in the images below and save it.
+![119](https://github.com/user-attachments/assets/3025a08e-8f52-4fc8-8f59-07e6cb056fbb)
 
-![A screenshot of a computer program Description automatically generated](media/029a92ff0f1fdd58e10a460ae5a722da.png)![A screenshot of a computer program Description automatically generated](media/becf92ee81932051da79186654d5e210.png)
+![120](https://github.com/user-attachments/assets/6c82a5e9-958a-4971-8dd5-3848652feaf3)
+
 
 Now again load the tech file by using the command tech ‘load sky130A.tech’ and again check drc by using command drc check in the tkcon terminal.
+![121](https://github.com/user-attachments/assets/6455fe98-1a9f-43b7-99b7-0c1a765150d3)
+![122](https://github.com/user-attachments/assets/96eb3ed9-40fa-41cd-9d59-5e78bbecf137)
 
-![A screenshot of a computer Description automatically generated](media/9f2b70a6945ac4a3417fa3d15e5fb3ba.png)![A screenshot of a computer Description automatically generated](media/cc98bebae87e0836905a4023dc4e1137.png)
 
 **DRC error as geometrical construct**
 
-Now load nwell.mag file into the magic and check for violations.
+Now load nwell.mag file into the magic and check for violations. 
+![123](https://github.com/user-attachments/assets/90318630-6451-4bb8-94df-7cd561abfbd8)
 
-![A screenshot of a computer Description automatically generated](media/4016e4c2ee6d5cbe391a8bcc1d441740.png)![A screenshot of a computer Description automatically generated](media/e7f98ff80ff6c4a4e9b3cea729054b4e.png)
+![124](https://github.com/user-attachments/assets/96aaccd1-c37f-4bf8-91dc-5b93767e232c)
+![125](https://github.com/user-attachments/assets/5f08f8eb-d826-4b74-b15c-eb899d871462)
 
-![A screenshot of a computer Description automatically generated](media/043f1f82415307d7ddc4628fa98f7f9b.png)
+
+
 
 After updating the tech file load it again and check for errors.
+![126](https://github.com/user-attachments/assets/32736b51-a7dd-4296-a7c5-5dd35bede06d)
 
-![A screenshot of a computer Description automatically generated](media/fc862f2818727be666d65bbf3857c77e.png)
 
-![A screenshot of a computer Description automatically generated](media/e62bc745ebf731926d51f5cfe1d688b0.png)
+![127](https://github.com/user-attachments/assets/dbdb0a8e-fc5a-4693-8ceb-beeccd67362f)
+
+
 
 Now after tapping the nwell violations are resolved.
 
@@ -967,7 +982,8 @@ after modification of some of the configurations using set command, we have to r
 ![Screenshot 2024-09-06 184003](https://github.com/user-attachments/assets/c74c98f5-985d-421f-9e64-db32dc06714d)
 ![Screenshot 2024-09-06 184033](https://github.com/user-attachments/assets/d7f84da8-d4b9-4135-9294-d4eae84d3e2e)
 
-![A screenshot of a computer Description automatically generated](media/2bd7ee46443371ad1f0dd54bd4635781.png)
+
+![129](https://github.com/user-attachments/assets/2d20b10c-aa0b-45ab-8989-a1233a5a8cec)
 
 While running floorplan, I got some errors. To rectify those I used following:
 
@@ -985,8 +1001,9 @@ after these we run placement.
 ![Screenshot 2024-09-03 134502](https://github.com/user-attachments/assets/cba35940-63bf-4708-8ce1-a69f7938dcfb)
 
 
+![131](https://github.com/user-attachments/assets/d2bc732f-214c-4e2d-9b8a-ae8901ec9c0f)
 
-![A screenshot of a computer Description automatically generated](media/008283de8e9a21bcd37683f3d11404d6.png)
+
 
 **Delay Tables**
 
@@ -1049,10 +1066,11 @@ Purpose: In VLSI circuits, the clock distribution network is crucial for synchro
 Next step is to perform STA on the design. For this first we need to complete the synthesis stage. After synthesis is done some steps need to be followed.
 
 First, we need to create a new file **pre_sta.conf** in the openlane directory.
+![132](https://github.com/user-attachments/assets/9f6f55fe-5ac6-496d-8f82-72b2e8fd994c)
 
-![A screenshot of a computer Description automatically generated](media/e47c434b6779cadd9db36833c7afe91e.png)After that we need to create another file called **my_base.sdc** in the src directory which is picorv32a directory.
+After that we need to create another file called **my_base.sdc** in the src directory which is picorv32a directory.
 
-![A screenshot of a computer program Description automatically generated](media/2e75697da682161425c73e46fb000543.png)
+![133](https://github.com/user-attachments/assets/0587105d-602a-4e2c-9157-d5f39edff597)
 
 Now we need to use the command **sta pre_sta.conf** being in the openlane directory.
 
@@ -1113,8 +1131,10 @@ set_propagated_clock [all_clocks]
 report_checks -path_delay min_max -format full_clock_expanded -digits 4
 
 After all these steps the db will get created and by using the last command we will get a timing report too.
+![134](https://github.com/user-attachments/assets/114a80bb-22c9-4753-a65c-423159fc1cdb)
 
-![A screenshot of a computer Description automatically generated](media/252e4577d0bde60e49e9a8abc94c1de3.png)**Lab steps to execute OpenSTA with right timing libraries and CTS assignment**
+
+**Lab steps to execute OpenSTA with right timing libraries and CTS assignment**
 
 To remove sky130_fd_sc_hd__clkbuf_1 from the list
 
@@ -1167,8 +1187,8 @@ report_checks -path_delay min_max -fields {slew trans net cap input_pins} -forma
 report_clock_skew -hold
 
 report_clock_skew -setup
+![135](https://github.com/user-attachments/assets/d0674586-cf66-4b37-a9dc-bf0fca16c935)
 
-![A screenshot of a computer Description automatically generated](media/c92c7aeb8dff783946c489b2cc3d35a0.png)
 
 **Sky130 Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA**
 
@@ -1210,16 +1230,18 @@ c6f0)
 **Lab steps to build power distribution network**
 
 After completion of CTS, now we need to lay down power distribution network(PDN) for the design and it is done by using the command gen_pdn.
-![Screenshot 2024-09-06 185705](https://github.com/user-attachments/assets/e13c07c6-ee29-488b-a422-9ec5d62acb82)
+
+![Screenshot 2024-09-06 185705](https://github.com/user-attachments/assets/ba71590e-929f-4bda-8dca-1ce9f97aeee0)
 
 
 We can clearly see that "PDN generation was succesful".
 
-![A screenshot of a computer Description automatically generated](media/dbd2af3f539aa44fed7695266046642e.png)
+![136](https://github.com/user-attachments/assets/44265b66-3072-4f41-8d04-5ccbd0155d90)
 
 we can see that the pitch of the standard cell rails is 2.720.
 
-![A screenshot of a computer program Description automatically generated](media/bbe5fc5f92884b2f34f04421d36ea0c0.png)
+![137](https://github.com/user-attachments/assets/ca2f3585-a1ba-438d-a0ee-53668566bf24)
+
 
 ![107](https://github.com/user-attachments/assets/40ffad9d-3d4b-4d66-a2ff-af8e879e6178)
 
@@ -1270,8 +1292,9 @@ Access Point(AP) : An on-grid point on the metal of the route guide, and is used
 Make sure the CURRENT_DEF is set to pdn.def
 
 The Final stage in the flow is ROUTING. we can start routing by using the command **run_routing** .
+![138](https://github.com/user-attachments/assets/3c6d4589-cb72-46a0-abec-68a494c3cad5)
 
-![A screenshot of a computer Description automatically generated](media/ff5875c05ac3bb1f945e83db79135f3a.png)![A screenshot of a computer Description automatically generated](media/7cd111d41e25ae0a9501a87bf8e6cdd3.png)
+![139](https://github.com/user-attachments/assets/ebc62e10-070b-404d-a525-7094c244df93)
 
 From tha above figures we can see that routing is done and it is done with 0 violations, So our routing is succesful but we can see the negative slack. We need to eliminate that negative slack for succesful completion of Physical design flow.
 
@@ -1279,4 +1302,5 @@ We can see the final layout in gui using magic tool by using the command
 
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/28-08_04-41/tmp/merged.lef def read /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/28-08_04-41/results/routing/picorv32a.def &
 
-![A screen shot of a computer Description automatically generated](media/177142255a1e505ed07fbcbbc5b4db19.png)
+![140](https://github.com/user-attachments/assets/92c8a1d0-4983-423e-bb58-ce794712fc73)
+
