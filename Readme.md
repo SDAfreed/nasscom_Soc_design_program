@@ -1,4 +1,4 @@
-![Screenshot 2024-09-03 160925](https://github.com/user-attachments/assets/a1192e19-7e67-45a0-ad13-094b82aa3c04)**NASSCOM VSD SoC Design Program**
+**NASSCOM VSD SoC Design Program**
 
 **Sky130 Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK**
 
@@ -1221,6 +1221,7 @@ we can see that the pitch of the standard cell rails is 2.720.
 
 ![A screenshot of a computer program Description automatically generated](media/bbe5fc5f92884b2f34f04421d36ea0c0.png)
 
+![107](https://github.com/user-attachments/assets/40ffad9d-3d4b-4d66-a2ff-af8e879e6178)
 
 In the above figure we can observe the path through which power is delivered all the way to standard cells.
 
