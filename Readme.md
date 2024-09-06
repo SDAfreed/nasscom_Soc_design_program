@@ -1,4 +1,4 @@
-**NASSCOM VSD SoC Design Program**
+![Screenshot 2024-09-03 160925](https://github.com/user-attachments/assets/a1192e19-7e67-45a0-ad13-094b82aa3c04)**NASSCOM VSD SoC Design Program**
 
 **Sky130 Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK**
 
@@ -691,13 +691,19 @@ The 16-mask CMOS design fabrication process involves several steps to create int
 Each of these steps plays a crucial role in the fabrication process, contributing to the successful creation of CMOS integrated circuits with 16 masks.
 
 
+![97](https://github.com/user-attachments/assets/d8e1d90c-7ae5-4fe7-922d-197ff008a7d5)
+
 
 **Sky130 basic layers layout and LEF using inverter**
 
 -   From Layout, we see the layers which are required for CMOS inverter. Inverter is, PMOS and NMOS connected together.
--   Gates of both PMOS and NMOS are connected together and fed to input (here, A), NMOS source connected to ground (here, VGND), PMOS source is connected to VDD (here, VPWR), Drains of PMOS and NMOS are connected together and fed to output (here, Y). The First layer in skywater130 is local interconnect layer (locali), above that metal 1 is purple colour and metal 2 is pink colour. If you want to see connections between two distinct parts, place the cursor over that area and press S three times. If you want to see the type of a component, place the cursor over that area and press S one time. The tkcon window gives the component name if typed ‘what’![A screenshot of a computer Description automatically generated](media/2191dfbf599b87a353d3b0d5a8ece892.png)
+-   Gates of both PMOS and NMOS are connected together and fed to input (here, A), NMOS source connected to ground (here, VGND), PMOS source is connected to VDD (here, VPWR), Drains of PMOS and NMOS are connected together and fed to output (here, Y). The First layer in skywater130 is local interconnect layer (locali), above that metal 1 is purple colour and metal 2 is pink colour. If you want to see connections between two distinct parts, place the cursor over that area and press S three times. If you want to see the type of a component, place the cursor over that area and press S one time. The tkcon window gives the component name if typed ‘what’
+   ![2](https://github.com/user-attachments/assets/26e5d0b4-cea5-4eb3-bb54-7559ec720883)
+![3](https://github.com/user-attachments/assets/c0da841f-87b3-4ee2-a010-7244e194893b)
 
-    ![A screenshot of a computer Description automatically generated](media/277ae096d61e864447ec05735f1120a1.png)
+
+    
+
 
     To know the logical functioning of the inverter, we extract the spice and then we do simulation on the spice. To extract it on spice we open TKCON window, the steps are
 
@@ -708,8 +714,8 @@ Each of these steps plays a crucial role in the fabrication process, contributin
     ext2spice
 
     This creates the spice file in the present working directory. ext2spice commands converts the ext file to spice netlist. cthresh and rthresh are the switches to extract all the parasitic resistance and capacitance.
+![Screenshot 2024-09-06 180816](https://github.com/user-attachments/assets/afecd25c-7cb1-4ef4-b414-890fd9a89c76)
 
-    ![A screenshot of a computer Description automatically generated](media/f31a6ef067437dfb867db9b4b9a36f0a.png)
 
     **Create Final SPICE Deck**
 
@@ -739,14 +745,13 @@ Each of these steps plays a crucial role in the fabrication process, contributin
 
     The transient response from invoking the ngspice and the spice analysis
 
-    ![A screenshot of a computer Description automatically generated](media/c9790b3f4c8aaabc1c6cd714a8354178.png)
+    ![1](https://github.com/user-attachments/assets/2e35c773-9729-4546-9fc6-e74f541ea7c6)
 
     To plot the wave form type: ‘plot y vs time a’
+![Screenshot 2024-09-03 000353](https://github.com/user-attachments/assets/28e02169-8d9e-4442-9f3a-589fa4290b2f)
+![Screenshot 2024-09-03 000441](https://github.com/user-attachments/assets/7d60325c-976c-4a15-8ae8-bab7eb77beee)
 
-    ![A screenshot of a computer Description automatically generated](media/d2f20a92f0ee30043a2362a5bcb1bde5.png)
-
-    ![A screen shot of a graph Description automatically generated](media/b7e0857cd0bbc1b28102d66afc976b09.png)
-
+  
 **Standard cell characterization of CMOS Inverter**
 
 Characterization of the inverter standard cell depends on four timing parameters.
@@ -896,17 +901,21 @@ To implement our own stdcell, few guidelines must be followed
 
 This information is defined in tracks.info.
 
-**![A screenshot of a computer Description automatically generated](media/a8ff251e0cf62c29cd700aff8deb4580.png)**
+![Screenshot 2024-09-03 104531](https://github.com/user-attachments/assets/6ed8d45e-438d-4124-addf-f7b3a87b2a97)
 
-**![A screenshot of a computer Description automatically generated](media/9a62f6f19465d7b80312eb4ab148d719.png)**
+![Screenshot 2024-09-03 111653](https://github.com/user-attachments/assets/21071317-7a81-4601-a93e-8d5dad2747f8)
 
 To ensure the ports lie on the point we open up tkcon and write the following.
 
-**![A screenshot of a computer Description automatically generated](media/3dfb6951e7d7f33ea95239c11db6a1ef.png)**
+![WhatsApp Image 2024-09-03 at 11 21 32_20d3f09f](https://github.com/user-attachments/assets/127757bc-b637-4d3b-8374-538405e30844)
+
 
 Checking the grids and the width and different configurations of the cell
 
-**![A screenshot of a computer Description automatically generated](media/951d41f1137be5ba77dfc3905bbf90e7.png)![A computer screen shot of a diagram Description automatically generated](media/4de2caae360958052c08337940f87f39.png)**
+![WhatsApp Image 2024-09-03 at 11 23 13_e311f0d8](https://github.com/user-attachments/assets/0c738b80-76d8-46cb-96a0-7bbc17104103)
+![WhatsApp Image 2024-09-03 at 11 24 44_44acab2f](https://github.com/user-attachments/assets/f6436a2f-32ef-48a9-9b11-55844929443a)
+![WhatsApp Image 2024-09-03 at 11 26 07_52945b1e](https://github.com/user-attachments/assets/a3a94370-2d52-432a-8cbb-9364efd8da6b)
+
 
 **Create Port Definition:**
 
@@ -932,20 +941,31 @@ This generates sky130_vsdinv.lef file. Once the lef is generated we move it to t
 **Steps to include custom cell in ASIC design**
 
 We have created a custom standard cell in previous steps of an inverter. Copy lef file, sky130_fd_sc_hd_typical.lib, sky130_fd_sc_hd_slow.lib & sky130_fd_sc_hd_fast.lib to src folder of picorv32a from libs folder vsdstdcelldesign. However, we need to modify the config.tcl file as below.
+![Screenshot 2024-08-23 104342](https://github.com/user-attachments/assets/40efd44a-690c-45f1-9f39-2082158e307a)
 
-![A screenshot of a computer Description automatically generated](media/0ccf2bdc406cffbff19b36435ffb79b3.png)
+
 
 To integrate standard cell in openlane flow after make mount , perform following commands:
 
-![A screenshot of a computer Description automatically generated](media/9f18e4ff5cb845f3a7c138c577405534.png)
+![Screenshot 2024-09-06 183602](https://github.com/user-attachments/assets/d5424447-fb8b-44f6-845a-7276d7396866)
 
-![](media/178b4b1facb64d0bcdcb6bc6ab13ba2f.png)
 
-![A screenshot of a computer program Description automatically generated](media/0968ede351d45ece7792966389bcb7f3.png)
+![Screenshot 2024-09-06 183815](https://github.com/user-attachments/assets/fed421b8-495d-426b-bc8c-b20c49e806e1)
+
 
 Running synthesis: ‘run_synthesis’
 
-![A screenshot of a computer Description automatically generated](media/017a679c9f5a24b731273186530bac31.png)![A screenshot of a computer Description automatically generated](media/0721a802dd7805b7932460f3cdc6c96e.png)![A screenshot of a computer Description automatically generated](media/3f6e56b196c8f5499468eb9fc451fb74.png)after modification of some of the configurations using set command, we have to run synthesis again and then floorplan.![A screenshot of a computer Description automatically generated](media/017a679c9f5a24b731273186530bac31.png)![A screenshot of a computer Description automatically generated](media/3f6e56b196c8f5499468eb9fc451fb74.png)
+![Screenshot 2024-09-06 184003](https://github.com/user-attachments/assets/72809ebe-e880-4d78-8f13-a7fd40fee49b)
+
+![Screenshot 2024-09-06 184022](https://github.com/user-attachments/assets/76199232-1df9-4e63-9ade-fee79f71a1a0)
+
+![Screenshot 2024-09-06 184033](https://github.com/user-attachments/assets/7058fd7f-4dca-4ac8-bbb9-29c6cde3b25a)
+
+
+ 
+after modification of some of the configurations using set command, we have to run synthesis again and then floorplan.
+![Screenshot 2024-09-06 184003](https://github.com/user-attachments/assets/c74c98f5-985d-421f-9e64-db32dc06714d)
+![Screenshot 2024-09-06 184033](https://github.com/user-attachments/assets/d7f84da8-d4b9-4135-9294-d4eae84d3e2e)
 
 ![A screenshot of a computer Description automatically generated](media/2bd7ee46443371ad1f0dd54bd4635781.png)
 
@@ -958,10 +978,13 @@ place_io
 tap_decap_or
 
 after these we run placement.
+![Screenshot 2024-09-06 173228](https://github.com/user-attachments/assets/19cdc894-035b-48af-8c3d-ae00993a5ac5)
 
-![A screenshot of a computer Description automatically generated](media/9afba1080833b3e91df90c20f3b7dbb9.png)![A screen shot of a computer Description automatically generated](media/3ed7c7cd55feb1a919087eb690f020e6.png)
+![Screenshot 2024-09-03 133451](https://github.com/user-attachments/assets/fc4c3186-a011-47ae-9920-e7903c442fcc)
 
-![A screenshot of a computer Description automatically generated](media/bdae644c7957066f8b352bcb5a3e78ed.png)
+![Screenshot 2024-09-03 134502](https://github.com/user-attachments/assets/cba35940-63bf-4708-8ce1-a69f7938dcfb)
+
+
 
 ![A screenshot of a computer Description automatically generated](media/008283de8e9a21bcd37683f3d11404d6.png)
 
@@ -1035,7 +1058,8 @@ Now we need to use the command **sta pre_sta.conf** being in the openlane direct
 
 We can say that STA is succesful when the slack that we will get equals to that of synthesis stage.
 
-![](media/6a874bc16784781c65743ded6fde4e94.png)
+![Screenshot 2024-09-03 152911](https://github.com/user-attachments/assets/b44cdc23-a674-429a-9442-69a107d1c2cc)
+
 
 As we can see that Slack is equal to of that we got in synthesis stage. So STA is succesful.
 
@@ -1055,11 +1079,14 @@ Now we can start working on it, starting with Floorplan by using the same comman
 
 After placement is done, we can proceed with cts stage. To perform CTS we should use the command **run_cts**.
 
-![A screenshot of a computer Description automatically generated](media/4721319f1acfb03667eb97df50588429.png)
+![Screenshot 2024-09-03 155301](https://github.com/user-attachments/assets/db394857-e199-4379-a3ae-e847a57d2232)
+
+![Screenshot 2024-09-03 160925](https://github.com/user-attachments/assets/a7efd79a-7dc4-4230-b092-c9c80514cb16)
 
 After completion of the cts we can observe that in the synthesis results directory a new **.cts** file is added. The newly added CTS file contains both the previous netlist and also the clock buffers that were added during the cts stage.
 
-![A screenshot of a computer Description automatically generated](media/633381eab189393a71abf76a0e2e5723.png) **SKY130_D4_SK4 -Timing analysis with real clocks using openSTA**
+![Screenshot 2024-09-06 185100](https://github.com/user-attachments/assets/f106ce40-4360-4633-b759-8c2ed760dd39)
+
 
 **Lab steps to analyze timing with real clocks using OpenSTA**
 
@@ -1157,7 +1184,8 @@ The algorithm assigns labels to neighbouring grid cells around the source, incre
 
 However, the Lee algorithm has limitations. It essentially constructs a maze and then numbers its cells from the source to the target. While effective for routing between two pins, it can be time-consuming when dealing with millions of pins. There are alternative algorithms that address similar routing challenges.
 
-![A screenshot of a computer Description automatically generated](media/9e191fe4a659ccc0fda5f187d39b3055.png) **![A screenshot of a computer game Description automatically generated](media/5b0c324347e08710ef1a9b0a61ebf43a.png)**
+![98](https://github.com/user-attachments/assets/aac6ca72-7e34-40ad-a268-920198ff70f7)
+![99](https://github.com/user-attachments/assets/5559811c-7b65-4284-8314-18a02b101fcd)
 
 **Design Rule Check (DRC)**
 
@@ -1167,17 +1195,23 @@ Design rules for physical wires
 
 Minimum width of the wire, Minimum spacing between the wires, Minimum pitch of the wire. To solve signal short violation, we take the metal layer and put it on to upper metal layer. we check via rules, Via width, via spacing.
 
-![A computer screen shot of a diagram Description automatically generated](media/f7cda7b0c8de102393c116385adf8d61.png) ![A computer screen shot of a diagram Description automatically generated](media/a924df96e60f08f860c5c53ba316acfc.png) ![A computer screen shot of a diagram Description automatically generated](media/a12ab216b41ca3344544b55a7356ee78.png)
+![100](https://github.com/user-attachments/assets/138a42c1-5e28-4814-bf43-ff9231564dba)
+![101](https://github.com/user-attachments/assets/9ab7a268-6024-485f-9bb0-eb5dd8d84e40)
+![102](https://github.com/user-attachments/assets/cd9530fd-8995-4b5f-9dd9-78aa7d8b1158)
+![103](https://github.com/user-attachments/assets/898abf21-169a-4301-a175-905ec859ee1f)
+![104](https://github.com/user-attachments/assets/343684b0-a60b-4166-818e-ee33dfaae198)
+![105](https://github.com/user-attachments/assets/6770f6c4-7066-47c0-aafc-0ab1a4bb
+![106](https://github.com/user-attachments/assets/0cdbe755-8f6e-47fd-8a7a-77a28399d1e9)
+c6f0)
 
-![A computer screen shot of a diagram Description automatically generated](media/29ed5c1797e4bbd6d787b2db73fd16c1.png) ![A computer screen shot of a diagram Description automatically generated](media/46a38cc4bcc6dbdcb699f36df4a1eab8.png)
-
-![A computer screen shot of a diagram Description automatically generated](media/99afe2ab106195316d37f9535a1c4cd4.png) ![A computer screen shot of a diagram Description automatically generated](media/98ac5e3715d55718083da4082ca28799.png)
 
 **SKY130_D5_SK2 - Power Distribution Network and routing**
 
 **Lab steps to build power distribution network**
 
-After completion of CTS, now we need to lay down power distribution network(PDN) for the design and it is done by using the command gen_pdn.![A screenshot of a computer Description automatically generated](media/896b7b48133445aba87b641d488cf9f3.png)
+After completion of CTS, now we need to lay down power distribution network(PDN) for the design and it is done by using the command gen_pdn.
+![Screenshot 2024-09-06 185705](https://github.com/user-attachments/assets/e13c07c6-ee29-488b-a422-9ec5d62acb82)
+
 
 We can clearly see that "PDN generation was succesful".
 
@@ -1187,7 +1221,6 @@ we can see that the pitch of the standard cell rails is 2.720.
 
 ![A screenshot of a computer program Description automatically generated](media/bbe5fc5f92884b2f34f04421d36ea0c0.png)
 
-![A diagram of a cell phone Description automatically generated](media/7127c7bdbb9776b2bd3ebf9f0931bcfb.png)
 
 In the above figure we can observe the path through which power is delivered all the way to standard cells.
 
